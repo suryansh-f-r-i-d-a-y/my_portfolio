@@ -1,16 +1,6 @@
 import React from 'react';
-import { ViewType } from '../App';
 
-interface HeroProps {
-  onNavigate: (view: ViewType, sectionId?: string | null) => void;
-}
-
-function Hero({ onNavigate }: HeroProps) {
-  const handleCtaClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    onNavigate('home');
-  };
-
+function Hero() {
   return (
     <section className="home-hero">
       <div className="home-hero__content">
@@ -23,7 +13,7 @@ function Hero({ onNavigate }: HeroProps) {
           </p>
         </div>
         <div className="home-hero__cta">
-          <a href="#projects" onClick={handleCtaClick} className="btn btn--bg">Projects</a>
+          <a href="#projects" className="btn btn--bg">Projects</a>
         </div>
       </div>
     </section>

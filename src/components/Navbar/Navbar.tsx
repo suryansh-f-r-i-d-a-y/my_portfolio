@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { ViewType } from '../../App';
-import './Navbar.css'
+import './Navbar.css';
 
 const Navbar = () => {
   return (
