@@ -8,7 +8,7 @@ interface HeroProps {
 function Hero({ onNavigate }: HeroProps) {
   const handleCtaClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    onNavigate('home', 'projects');
+    onNavigate('home');
   };
 
   return (
@@ -19,15 +19,12 @@ function Hero({ onNavigate }: HeroProps) {
         </h1>
         <div className="home-hero__info">
           <p className="text-primary">
-            i am a tech enthusiast studying at Chitkara University, with career interests in web dev, software devlopmen and content creation.
+            I spend my days writing clean code and shipping scalable web applications. Welcome to my workspace.
           </p>
         </div>
         <div className="home-hero__cta">
           <a href="#projects" onClick={handleCtaClick} className="btn btn--bg">Projects</a>
         </div>
-      </div>
-      <div className="home-hero__mouse-scroll-cont">
-        <div className="mouse"></div>
       </div>
     </section>
   );

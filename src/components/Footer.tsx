@@ -1,19 +1,6 @@
-import React from 'react';
-import { ViewType } from '../App';
-
-interface FooterProps {
-  onNavigate: (view: ViewType, sectionId?: string | null) => void;
-}
-
-function Footer({ onNavigate }: FooterProps) {
-  const socialLinks = [
-    { name: 'linkedin', icon: '/assets/png/linkedin-ico.png', url: '#' },
-    { name: 'github', icon: '/assets/png/github-ico.png', url: 'https://github.com/suryansh-f-r-i-d-a-y' },
-    { name: 'twitter', icon: '/assets/png/twitter-ico.png', url: '#' },
-    { name: 'youtube', icon: '/assets/png/yt-ico.png', url: '#' },
-    { name: 'instagram', icon: '/assets/png/insta-ico.png', url: '#' }
-  ];
-
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { TbMail } from "react-icons/tb";
+const Footer = () => {
   return (
     <footer className="main-footer">
       <div className="main-container">
@@ -22,22 +9,14 @@ function Footer({ onNavigate }: FooterProps) {
             <h2 className="heading heading-sm main-footer__heading-sm">
               <span>Social</span>
             </h2>
-            <div className="main-footer__social-cont">
-              {socialLinks.map((link, idx) => (
-                <a 
-                  key={link.name}
-                  target="_blank" 
-                  rel="noreferrer" 
-                  href={link.url}
-                >
-                  <img 
-                    className={`main-footer__icon ${idx === socialLinks.length - 1 ? 'main-footer__icon--mr-none' : ''}`} 
-                    src={link.icon} 
-                    alt={`${link.name} icon`} 
-                  />
-                </a>
-              ))}
+
+            <div className="mt-4 flex gap-4">
+              <a href=""><FaLinkedin size={20} /></a>
+              <a href=""><FaGithub size={20} /></a>
+              <a href=""><FaInstagram size={20} /></a>
+              <a href=""><TbMail size={20} /></a>
             </div>
+
           </div>
           <div className="main-footer__row main-footer__row-2">
             <h4 className="heading heading-sm text-lt">Suryansh Chauhan</h4>
@@ -45,9 +24,9 @@ function Footer({ onNavigate }: FooterProps) {
               For projects or Internship offers you can contact me through my social media handles too, I am active there. Thank you!
               <br />
               <br />
-              Email: suryansh2465.be20@chitkara.edu.in
+              Email: <a href="mailto:[EMAIL_ADDRESS]">suryanshchauhan1607@gmail.com</a>
               <br />
-              Mobile: 8437109265
+              Mobile: +91 84371 09265
             </p>
           </div>
         </div>
@@ -63,4 +42,4 @@ function Footer({ onNavigate }: FooterProps) {
   );
 }
 
-export default Footer;
+export default Footer

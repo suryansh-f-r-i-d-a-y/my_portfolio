@@ -2,22 +2,15 @@ import React from 'react';
 
 function About() {
   const skills = [
-    'HTML', 'CSS', 'Bootstrap', 'JavaScript', 'React', 'Jquery', 
+    'HTML', 'CSS', 'Bootstrap', 'JavaScript', 'React', 'Jquery',
     'GIT', 'C++', 'Java', 'Video editting', 'Photoshop', 'Graphic design'
   ];
 
   return (
-    <section id="about" className="about sec-pad">
+    <section id="about" className="about">
       <div className="main-container">
         <h2 className="heading heading-sec heading-sec__mb-med">
           <span className="heading-sec__main">About Me</span>
-          <div className="myimage" style={{ display: 'flex', margin: '5rem' }}>
-            <img 
-              src="/assets/png/s.png" 
-              style={{ height: '30vw', alignItems: 'center', margin: 'auto' }} 
-              alt="Suryansh Chauhan Profile" 
-            />
-          </div>
           <span className="heading-sec__sub">
             Hey my name is suryansh Chauhan , but you can also call me Ansh for short. Friends and family describe me as being just "a little" quirky and curious.
             I love to travel, meet different people, and learn new things every day about the world around me.
@@ -52,7 +45,7 @@ function About() {
               </p>
             </div>
           </div>
-          
+
           <div className="about__content-skills">
             <h3 className="about__content-title">My Skills</h3>
             <div className="skills">
